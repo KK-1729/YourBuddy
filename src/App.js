@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Account from './pages/accountPage/accountPage';
+import Admin from'./pages/admin/admin';
+import Counsellors from './pages/counsellors/counsellors';
+import Landing from './pages/landing/landing';
+import Login from './pages/login/login';
+import PostForm from './pages/postForm/postForm'; 
+import SignUp from './pages/signup/signup';
+import Stories from './pages/stories/stories';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/home" element={<Stories />} />
+          <Route exact path="/admin" element={<Admin />} />
+          <Route exact path="/counsellors" element={<Counsellors />} />
+          <Route exact path="/postform" element={<PostForm />} />
+          <Route exact path="/profile" element={<Account />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
