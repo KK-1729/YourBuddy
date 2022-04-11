@@ -1,0 +1,24 @@
+/* NAVBAR */
+.logo-image {
+    width: 346px;
+    height: 55px;
+}
+.nav-item .nav-link{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #595959;
+    margin-left: 32px;
+}
+.nav-item .home-link {
+    margin-left: 75px;
+}
+.nav-item .btn {
+    background-color: #FFFFFF;
+    color: #F1886D;
+    border-radius: 24.5px;
+    box-shadow: 0px 4px 4px rgba(63, 96, 98, 0.25);
+    width: 126px;
+    height: 49px;
+}

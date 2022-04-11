@@ -1,0 +1,42 @@
+.jumbotron {
+    background-color: #F1886D;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+.display-4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 64px;
+    margin-top: 7%;
+    margin-left: 86px;
+}
+.btn-lg {
+    background-color: #FFFFFF;
+    color: #595959;
+    width: 247px;
+    height: 60px;
+    border-radius: 44px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-top: 10%;
+    margin-left: 86px;
+    margin-bottom: 10%;
+    padding-left: 0;
+}
+.fa-arrow-right {
+    transform: scale(2.5, 0.5);
+    color: #F1886D;
+    padding-left: 5%;
+}
+.newspic {
+    position: absolute;
+    width: 417px;
+    height: 558px;
+    left: 1024px;
+    top: 12%;
+    float: right;
+}
