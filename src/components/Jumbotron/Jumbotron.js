@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import './Jumbotron.css';
+import Counsellor from '../../images/counsellor.png';
+import { Link } from 'react-router-dom';
 
 function Jumbo() {
     return (
@@ -21,7 +22,7 @@ function Jumbo() {
         // </div>
         <div>
             {/* <Jumbotron> */}
-            <h1>Regular, Jumbotron!</h1>
+            {/* <h1>Regular, Jumbotron!</h1>
             <p>
                 This is a simple Jumbotron example.
             </p>
@@ -29,8 +30,20 @@ function Jumbo() {
                 <Button variant="primary">
                 Primary Button
                 </Button>
-            </p>
+            </p> */}
             {/* </Jumbotron> */}
+            <div className="row">
+                <div className="col-lg-6 jumbo-left">
+                    <h1>Start your story!</h1>
+                    <Link to="/home">
+                        <Button variant="dark" className="btn">Get Started</Button>
+                    </Link>
+                </div>
+                <div className="col-lg-6 jumbo-right">
+                    <img src={Counsellor} className="img-responsive" />
+                </div>
+            </div>
+            
         </div>
     );
 }
