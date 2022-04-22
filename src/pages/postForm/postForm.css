@@ -1,0 +1,12 @@
+.post-form {
+    background-color: #b3b3b3;
+    margin-top: 5%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+
+.form-label {
+    margin-right: 2%;
+}
