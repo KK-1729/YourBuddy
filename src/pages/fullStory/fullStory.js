@@ -25,10 +25,22 @@ function FullStory() {
                     quis mauris. Nam elit nisi, blandit id eleifend eu, pulvinar et sem.
                 </p>
                 <br />
+                <input type="text"></input><br></br>
                     <Button variant="dark" className="btn col-lg-3">Comment</Button>
                     <Button variant="dark" className="btn col-lg-3">Like</Button>
                     <Button variant="dark" className="btn col-lg-3">Dislike</Button>
+
+
+                <br></br><br></br><br></br><br></br>
+
+                <div className='comment'>
+                    Comment 1
+                </div>
+
             </div>
+
+
+            
         </div>
     ); 
 }

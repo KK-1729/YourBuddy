@@ -1,8 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import fire from '../../firebase';
 import './login.css';
 import { Link } from 'react-router-dom';
 
 function Login() {
+
+   
+  
+  const [loginEmail,setLoginEmail]=useState('');
+  const [loginPassword,setLoginPassword]=useState('');
+
+  const [emailError,setEmailError]=useState('');
+  const [passwordError,setPasswordError]=useState('');
+  const [hasAccount,setHasAccount]=useState(false);
+
+  const login = async () => {
+
+  }
+
+  const logout = async () => {
+
+  }
+  
+
     return (
         <div>
             <div className="container">
@@ -21,7 +41,13 @@ function Login() {
                 <i className="fa fa-user"></i>
               </div>
               <div className="info">
-                <input type="text" className="input" name="username" placeholder="Username" />
+                
+                <input type="text" className="input" name="username" placeholder="Username" 
+                onChange={(event)=>{
+                  setLoginEmail(event.target.value);
+                }}
+                />
+
               </div>
             </div>
             <div className="login-info">
