@@ -1,5 +1,4 @@
 // Import the functions you need from the SDKs you need
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -7,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDCBYA2p-Ydt2r6b4RemmLfsDu7-VtxRNs",
-  authDomain: "yourbuddy-c7f90.firebaseapp.com",
-  projectId: "yourbuddy-c7f90",
-  storageBucket: "yourbuddy-c7f90.appspot.com",
-  messagingSenderId: "412288227417",
-  appId: "1:412288227417:web:275ad2fd81d04e1a6cf948"
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSENGER_ID}`,
+  appId: `${process.env.REACT_APP_APPLICATION_ID}`
 };
 
 // Initialize Firebase

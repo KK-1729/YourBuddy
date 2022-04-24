@@ -5,14 +5,11 @@ import { Link } from 'react-router-dom';
 
 function Login() {
 
-   
-  
-  const [loginEmail,setLoginEmail]=useState('');
-  const [loginPassword,setLoginPassword]=useState('');
-
-  const [emailError,setEmailError]=useState('');
-  const [passwordError,setPasswordError]=useState('');
-  const [hasAccount,setHasAccount]=useState(false);
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [hasAccount, setHasAccount] = useState(false);
 
   const login = async () => {
 

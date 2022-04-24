@@ -4,22 +4,21 @@ import { Link } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../../firebase';
 
-
-
 function SignUp() {
 
-  const [registerEmail,setRegisterEmail]=useState('');
-  const [registerPassword,setRegisterPassword]=useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
 
   const register = async () => {
-    try{
-      const user=await createUserWithEmailAndPassword(
+    try {
+      const user = await createUserWithEmailAndPassword(
         auth, 
         registerEmail,
-        registerPassword);
-
+        registerPassword
+      );
       console.log(user); 
-    } catch (error){
+    } 
+    catch(error) {
       console.log(error.message);
     }
   };
