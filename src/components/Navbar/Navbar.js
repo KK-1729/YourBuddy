@@ -53,6 +53,10 @@ function NavBar() {
 
                         {user?<>
                         <li className="nav-item">
+                            <Link to="/chat" className="nav-link">Chats</Link>
+                        </li>
+
+                        <li className="nav-item">
                             <button onClick={logout} className="nav-link">Logout</button>
                         </li>
                         </>:<></>}

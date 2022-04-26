@@ -55,7 +55,9 @@ const Stories=()=> {
 
     const updateComment = () =>{
         setPrintPostComment(postcomment);
+        alert('Warning : This might be a hate comment. Action might be taken');
     }
+
 
 
 
