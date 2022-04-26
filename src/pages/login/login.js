@@ -94,7 +94,7 @@ function Login() {
             <font color="red">{errormsg}</font>
             <div className="login-btn">
               <button onClick={login}>Sign In</button>
-               <button onClick={logout}>Logout</button>
+              {user?<button onClick={logout}>Logout</button>:<></>}
             </div>
             <div className="login-new">
               <Link to="/signup">New Here? Create an account</Link>
