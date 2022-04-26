@@ -1,23 +1,31 @@
 .jumbo-left {
-    padding-top: 10%;
+	padding-top: 10%;
 }
 
 .jumbo-right {
-    padding-top: 3%;
+	padding-top: 3%;
 }
 
-.btn {
-    margin-top: 3%;
+.story-jumbo .btn {
+	margin-top: 1vh;
 }
 
-.img-responsive {
-    width: 50%;
-    height: 100%;
-    background-color: #b3b3b3;
+.story-jumbo .row {
+	background-color: rgb(13, 212, 179);
+	padding: 21vh 0;
 }
 
-.row {
-    background-color: #b3b3b3;
-    padding-bottom: 5%;
-    margin-top: 3%;
+.storydiv {
+	margin: 10vh 10vw;
+}
+
+.storydiv h1 {
+	font-size: 12vh;
+	font-weight: 800;
+}
+
+.storydiv .story {
+	background-color: rgb(13, 212, 179);
+	border-radius: 5vh;
+	margin: 10vh 0;
 }

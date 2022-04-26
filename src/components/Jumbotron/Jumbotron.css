@@ -1,23 +1,16 @@
 .jumbo-left {
-    padding-top: 10%;
+	padding-top: 10%;
 }
 
 .jumbo-right {
-    padding-top: 3%;
+	padding-top: 3%;
 }
 
-.btn {
-    margin-top: 3%;
+.jumbopage .btn {
+	margin-top: 1vh;
 }
 
-.img-responsive {
-    width: 50%;
-    height: 100%;
-    background-color: #b3b3b3;
-}
-
-.row {
-    background-color: #b3b3b3;
-    padding-bottom: 5%;
-    margin-top: 3%;
+.jumbopage .row {
+	background-color: rgb(13, 212, 179);
+	padding: 21vh 0;
 }
