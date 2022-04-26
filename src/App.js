@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Account from './pages/accountPage/accountPage';
 import Admin from'./pages/admin/admin';
@@ -12,12 +12,14 @@ import FullStory from './pages/fullStory/fullStory';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
+
+  const [isAuth, setIsAuth] = useState({});
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={<Login   />} />
           <Route exact path="/signup" element={<SignUp />} />
           <Route exact path="/home" element={<Stories />} />
           <Route exact path="/admin" element={<Admin />} />

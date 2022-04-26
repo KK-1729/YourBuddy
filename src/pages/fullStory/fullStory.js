@@ -1,9 +1,45 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './fullStory.css';
 import Button from 'react-bootstrap/Button';
 import NavBar from'../../components/Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
-function FullStory() {
+
+//FireBase
+import {db} from '../../firebase';
+import { collection, getDocs } from "firebase/firestore"; 
+import { onAuthStateChanged } from "firebase/auth";
+import {auth} from '../../firebase';
+
+
+
+const FullStory=({location}) => {
+    const { hell = "defaultValue" } = location.state || {}
+    console.log({hell});
+
+     
+
+
+
+
+    const [user,setUser]=useState({});
+    const [postcomment,setPostComment]=useState("as");
+    const [comments,setComments] = useState([]);
+    const commentsCollectionRef = collection(db, "comments");
+
+    onAuthStateChanged(auth, (currentUser)=>{
+        setUser(currentUser);
+    });
+
+    useEffect(()=>{
+        const getComments = async () => {
+            const data = await getDocs(commentsCollectionRef);//TO get all documents in a collection
+            setComments(data.docs.map((doc)=>({key: doc.id, ...doc.data()})));
+        };
+        getComments();
+    },[])
+
+
     return(
         <div>
             <NavBar />
@@ -25,17 +61,39 @@ function FullStory() {
                     quis mauris. Nam elit nisi, blandit id eleifend eu, pulvinar et sem.
                 </p>
                 <br />
-                <input type="text"></input><br></br>
+                <input type="text" 
+                    onChange={(event)=>{
+                    setPostComment(event.target.value);
+                    }}
+                />
+                <br></br><br></br>
+                <button>Post</button>
+                
+                
+                <br></br>
                     <Button variant="dark" className="btn col-lg-3">Comment</Button>
                     <Button variant="dark" className="btn col-lg-3">Like</Button>
                     <Button variant="dark" className="btn col-lg-3">Dislike</Button>
 
 
                 <br></br><br></br><br></br><br></br>
-
+                <h2>Comments</h2>
                 <div className='comment'>
-                    Comment 1
+
+
+                    {comments.map((comment)=>{
+
+                        return(
+                        <div key={comment.key}>
+                            {comment.name} : {comment.comment}
+                        </div>
+                        );
+                        
+                    })}
+
                 </div>
+
+                {user?.email}
 
             </div>
 

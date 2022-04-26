@@ -1,22 +1,54 @@
 import React, {useState, useEffect} from 'react';
-import fire from '../../firebase';
 import './login.css';
+
+import { 
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut
+} from "firebase/auth";
+import {auth} from '../../firebase';
+
+
+import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function Login() {
 
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [hasAccount, setHasAccount] = useState(false);
+  const [errormsg,setErrorMsg]=useState('');
 
-  const login = async () => {
+  const [user,setUser]=useState({});
+  const navigate = useNavigate();
 
-  }
+  onAuthStateChanged(auth, (currentUser)=>{
+    setUser(currentUser);
+  });
+
+
+  const login = async (e) => {
+    e.preventDefault();
+
+    try{
+      const user=await signInWithEmailAndPassword(
+        auth, 
+        loginEmail,
+        loginPassword
+        );
+        console.log(user);
+        if(!errormsg)
+        {
+          navigate('/')
+        }
+    } catch (error){
+      console.log(error.message);
+      setErrorMsg(error.message);
+    }
+  };
 
   const logout = async () => {
-
+    await signOut(auth);
   }
   
 
@@ -32,7 +64,7 @@ function Login() {
         <div className="col-sm-6 login-content">
           <div className="login-title">Member Login</div>
   
-          <form className="login-form" action="/login" method="POST">
+          <form className="login-form">
             <div className="login-info">
               <div className="symbol">
                 <i className="fa fa-user"></i>
@@ -52,15 +84,22 @@ function Login() {
                 <i className="fa fa-lock"></i>
               </div>
               <div className="info">
-                <input type="password" className="input" name="password" placeholder="Password" />
+                <input type="password" className="input" name="password" placeholder="Password"
+                onChange={(event)=>{
+                  setLoginPassword(event.target.value);
+                }}
+                />
               </div>
             </div>
+            <font color="red">{errormsg}</font>
             <div className="login-btn">
-              <button>Sign In</button>
+              <button onClick={login}>Sign In</button>
+               <button onClick={logout}>Logout</button>
             </div>
             <div className="login-new">
               <Link to="/signup">New Here? Create an account</Link>
             </div>
+            Email of user :- {user?.email}
           </form>
         </div>
       </div>
@@ -70,3 +109,4 @@ function Login() {
 }
 
 export default Login;
+
