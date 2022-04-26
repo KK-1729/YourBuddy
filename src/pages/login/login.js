@@ -64,7 +64,6 @@ function Login() {
 							</div>
 							<div className="col-sm-6 login-content">
 								<div className="login-title">Member Login</div>
-
 								<form className="login-form">
 									<div className="login-info">
 										<div className="symbol">
@@ -115,6 +114,60 @@ function Login() {
 			</div>
 		</div>
 	);
+//     return (
+//         <div>
+//             <div className="container">
+//       <div className="row login-box">
+//         <div className="col-sm-6 images">
+//           <img className="img-1"
+//             src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+//             alt="" />
+//         </div>
+//         <div className="col-sm-6 login-content">
+//           <div className="login-title">Member Login</div>
+  
+//           <form className="login-form">
+//             <div className="login-info">
+//               <div className="symbol">
+//                 <i className="fa fa-user"></i>
+//               </div>
+//               <div className="info">
+                
+//                 <input type="text" className="input" name="username" placeholder="Username" 
+//                 onChange={(event)=>{
+//                   setLoginEmail(event.target.value);
+//                 }}
+//                 />
+
+//               </div>
+//             </div>
+//             <div className="login-info">
+//               <div className="symbol">
+//                 <i className="fa fa-lock"></i>
+//               </div>
+//               <div className="info">
+//                 <input type="password" className="input" name="password" placeholder="Password"
+//                 onChange={(event)=>{
+//                   setLoginPassword(event.target.value);
+//                 }}
+//                 />
+//               </div>
+//             </div>
+//             <font color="red">{errormsg}</font>
+//             <div className="login-btn">
+//               <button onClick={login}>Sign In</button>
+//               {user?<button onClick={logout}>Logout</button>:<></>}
+//             </div>
+//             <div className="login-new">
+//               <Link to="/signup">New Here? Create an account</Link>
+//             </div>
+//             Email of user :- {user?.email}
+//           </form>
+//         </div>
+//       </div>
+//     </div> 
+//         </div>
+//     );
 }
 
 export default Login;
