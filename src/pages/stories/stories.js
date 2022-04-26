@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 
 //FireBase
 import {db} from '../../firebase';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import {auth} from '../../firebase'; 
 
@@ -23,7 +23,12 @@ const Stories=()=> {
 
 
     const [user,setUser]=useState({});
-    const [postcomment,setPostComment]=useState("as");
+    //Comment
+    const [printpostcomment,setPrintPostComment]=useState("");
+    const [postcomment,setPostComment]=useState("");
+    const [postheading,setPostHeading]=useState("");
+
+
     const [comments,setComments] = useState([]);
     const commentsCollectionRef = collection(db, "comments");
 
@@ -48,7 +53,9 @@ const Stories=()=> {
     },[posts])
 
 
-    
+    const updateComment = () =>{
+        setPrintPostComment(postcomment);
+    }
 
 
 
@@ -78,16 +85,18 @@ const Stories=()=> {
                     <div className="story">
                         <h2>{post.heading}</h2>
                         <p>{post.content}</p>
-                         
+                        
                         <br />
+                        
 
                         <input type="text" 
                             onChange={(event)=>{
                             setPostComment(event.target.value);
+                            setPostHeading(post.heading)
                             }}
                         />
                     <br></br><br></br>
-                    <button>Post</button>
+                    <button onClick={()=>{updateComment()}}>Post</button>
                 
                 
                     <br></br>
@@ -99,8 +108,24 @@ const Stories=()=> {
                 <br></br><br></br><br></br><br></br>
                 <h2>Comments</h2>
                 <div className='comment'>
+                <p>
+                    <span>Your Comment : </span>
+                    <span>{printpostcomment}</span>
+                </p>
+                {post.comments?(
+                    Object.keys((post.comments)).map((key, i) => (
+                    <p key={i}>
+                    <span>{key} : </span>
+                    <span>{(post.comments)[key]}</span>
+                    </p>
+                    )
+                )
 
-
+                ):<>No Comments have been posted yet !</>
+                }
+                
+                
+            
                    
 
                 </div>
