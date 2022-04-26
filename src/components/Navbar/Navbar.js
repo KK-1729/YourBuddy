@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import Logo from "../../images/nav_logo.png";
-import { onAuthStateChanged,signOut } from "firebase/auth";
-import {auth} from '../../firebase'; 
-
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 
 function NavBar() {
-  const [user,setUser]=useState({});
+	const [user, setUser] = useState({});
 
-    onAuthStateChanged(auth, (currentUser)=>{
-        setUser(currentUser);
-    });
+	onAuthStateChanged(auth, (currentUser) => {
+		setUser(currentUser);
+	});
 
-
-    const logout = async () => {
-        await signOut(auth);
-    }
+	const logout = async () => {
+		await signOut(auth);
+	};
 
 	return (
 		<div>
@@ -63,31 +61,24 @@ function NavBar() {
 		</div>
 	);
 
+	//                         {!user?<>
+	//                         <li className="nav-item">
+	//                             <Link to="/login" className="nav-link">Login</Link>
+	//                         </li>
+	//                         <li className="nav-item">
+	//                             <Link to="/signup" className="nav-link">Sign Up</Link>
+	//                         </li>
+	//                         </>:<></>}
 
-    
+	//                         <li className="nav-item">
+	//                             <Link to="/postform" className="nav-link">Post</Link>
+	//                         </li>
 
-
-
-  
-//                         {!user?<>
-//                         <li className="nav-item">
-//                             <Link to="/login" className="nav-link">Login</Link>
-//                         </li>
-//                         <li className="nav-item">
-//                             <Link to="/signup" className="nav-link">Sign Up</Link>
-//                         </li>
-//                         </>:<></>}
-
-//                         <li className="nav-item">
-//                             <Link to="/postform" className="nav-link">Post</Link>
-//                         </li>
-
-//                         {user?<>
-//                         <li className="nav-item">
-//                             <button onClick={logout} className="nav-link">Logout</button>
-//                         </li>
-//                         </>:<></>}
-
+	//                         {user?<>
+	//                         <li className="nav-item">
+	//                             <button onClick={logout} className="nav-link">Logout</button>
+	//                         </li>
+	//                         </>:<></>}
 }
 
 export default NavBar;
