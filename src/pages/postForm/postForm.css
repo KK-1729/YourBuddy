@@ -1,12 +1,39 @@
-.post-form {
-    background-color: #b3b3b3;
-    margin-top: 5%;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5%;
+.formpage {
+	background-color: #17a09e;
 }
 
-.form-label {
-    margin-right: 2%;
+.post-form {
+	background-color: #fff;
+	width: fit-content;
+	margin: 5vh auto 0 auto;
+	padding: 15vh 10vw;
+}
+
+.post-form h1 {
+	font-weight: 800;
+	text-transform: capitalize;
+	margin-bottom: 5vh;
+}
+
+.post-form .row {
+	margin: 2vh 0;
+}
+
+.post-form .col-lg-3 {
+	text-align: right;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.post-form .forminput {
+	width: -webkit-fill-available;
+	resize: none;
+	padding: 1vh;
+}
+
+.post-form button {
+	width: 7vw;
+	font-size: 18px;
+	font-weight: 600;
 }

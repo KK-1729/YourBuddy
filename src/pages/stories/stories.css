@@ -1,5 +1,14 @@
-.jumbo-left {
-	padding-top: 10%;
+.jumbo-left h1 {
+	font-weight: 800;
+	font-size: 56px;
+}
+
+.jumbo-left button {
+	width: 10vw;
+	height: 7vh;
+	border-radius: 7vw;
+	font-size: 1em;
+	font-weight: 600;
 }
 
 .jumbo-right {
@@ -11,8 +20,9 @@
 }
 
 .story-jumbo .row {
-	background-color: rgb(13, 212, 179);
-	padding: 21vh 0;
+	background-color: #17a09e;
+	padding: 30vh 0;
+	margin-top: -20vh;
 }
 
 .storydiv {
@@ -25,7 +35,50 @@
 }
 
 .storydiv .story {
-	background-color: rgb(13, 212, 179);
+	background-color: #98f7ec;
 	border-radius: 5vh;
 	margin: 10vh 0;
+}
+
+.storydiv .story .storyhead {
+	font-weight: 800;
+	font-size: 5vh;
+	color: #000;
+}
+.storydiv .story p {
+	text-align: justify;
+	font-size: 20px;
+}
+
+.storydiv .story .yourcomment {
+	margin: 5vh auto;
+}
+
+.storydiv input {
+	width: 40vw;
+	height: 7vh;
+	border-radius: 1vh;
+	padding: 0 1em;
+}
+
+.storydiv button {
+	margin: auto 2vw;
+	height: 7vh;
+	width: 10vw;
+	border-radius: 10vh;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.storydiv .storycomment {
+	margin: 5vh auto 2vh auto;
+	text-align: justify;
+	font-weight: 800;
+	font-size: 5vh;
+	color: #000;
+}
+
+.storydiv .commenthead {
+	font-weight: 800;
+	text-transform: uppercase;
 }
