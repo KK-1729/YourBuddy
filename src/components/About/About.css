@@ -1,0 +1,9 @@
+.aboutpage {
+	padding: 10vh 5vw;
+}
+
+.aboutpage p {
+	margin: 5vh 0;
+	text-align: justify;
+	font-size: 20px;
+}

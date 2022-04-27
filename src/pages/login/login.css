@@ -1,69 +1,72 @@
-a{
+.loginpage a {
 	text-decoration: none;
 	color: #ffffff;
 }
-a:hover{
+.loginpage a:hover {
 	text-decoration: none;
 }
-body{
-	background-color: rgb(13, 212, 179);
+.loginpage {
+	background-color: #17a09e;
+	padding-bottom: 5vh;
 }
-input{
+.loginpage input {
 	outline: none;
 	border: none;
 }
-button{
+.loginpage button {
 	outline: none;
 	border: none;
 }
-.container{
-	width: 960px;
+.loginpage .container .row {
+	padding: 0;
+	background-color: #fff;
 }
-.login-box{
-	margin-top: 25px;
-	margin-bottom: 25px;
-	background-color: #ffffff;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
+.loginpage .container {
+	padding: 0 5vw;
 }
-.login-content{
-	padding: 125px 100px 125px 100px;
+.loginpage .login-box {
+	margin: 10vh 0;
+	padding: 0;
+	border-radius: 20px;
+	overflow: hidden;
 }
-.login-title{
+.loginpage .login-content {
+	padding: 10vh 7vw;
+}
+.loginpage .login-title {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 28px;
 	font-weight: 900;
 	color: #333333;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-    text-align: center;
-    width: 100%;
-    display: block;
-    padding-bottom: 54px;
+	text-align: center;
+	width: 100%;
+	display: block;
+	padding-bottom: 54px;
 }
-.login-info{
+.loginpage .login-info {
 	position: relative;
-    display: grid;
-    grid-template-columns: 7% 93%;
-    margin-bottom: 15px;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin-bottom: 15px;
 	padding: 0 30px 0 25px;
 	font-size: 15px;
 	color: #666666;
 	background: #e6e6e6;
-    border-radius: 25px;
+	border-radius: 25px;
 }
-.symbol{
+.loginpage .symbol {
 	color: #666666;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.login-info > div{
-    position: relative;
+.loginpage .login-info > div {
+	position: relative;
 	height: 45px;
 }
-.login-info > div > input{
+.loginpage .login-info > div > input {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -73,50 +76,52 @@ button{
 	background: none;
 	padding: 0.5rem 0.7rem;
 	font-size: 1rem;
-	font-family: 'poppins', sans-serif;
+	font-family: "poppins", sans-serif;
 }
-.login-btn{
+.loginpage .login-btn {
 	padding-top: 20px;
 }
-.login-btn button{
+.loginpage .login-btn button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 	letter-spacing: 2px;
-    color: #ffffff;
-    text-transform: uppercase;
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    background: rgb(25, 173, 149);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 25px;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	background: rgb(25, 173, 149);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 25px;
 	padding-right: 25px;
 	margin-bottom: 70px;
 }
-.login-btn button:focus{
+.loginpage .login-btn button:focus {
 	outline: none;
 }
-.login-new{
+.loginpage .login-new {
 	text-align: center;
 }
-.login-new a{
+.loginpage .login-new a {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #666666;
+	font-size: 15px;
+	color: #666666;
 }
-.login-new a:hover{
-    color: rgb(25, 173, 149);
+.loginpage .login-new a:hover {
+	color: rgb(25, 173, 149);
 }
-.images{
+.loginpage .images {
 	padding-left: 0;
 }
-.images img{
+.loginpage .images img {
 	max-width: 100%;
-	max-height: 100%;
+	height: fit-content;
+	padding: 0;
+	object-fit: fill;
 }
-.img-2{
+.loginpage .img-2 {
 	opacity: 0.85;
 }

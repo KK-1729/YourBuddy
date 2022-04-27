@@ -1,23 +1,84 @@
-.jumbo-left {
-    padding-top: 10%;
+.jumbo-left h1 {
+	font-weight: 800;
+	font-size: 56px;
+}
+
+.jumbo-left button {
+	width: 10vw;
+	height: 7vh;
+	border-radius: 7vw;
+	font-size: 1em;
+	font-weight: 600;
 }
 
 .jumbo-right {
-    padding-top: 3%;
+	padding-top: 3%;
 }
 
-.btn {
-    margin-top: 3%;
+.story-jumbo .btn {
+	margin-top: 1vh;
 }
 
-.img-responsive {
-    width: 50%;
-    height: 100%;
-    background-color: #b3b3b3;
+.story-jumbo .row {
+	background-color: #17a09e;
+	padding: 30vh 0;
+	margin-top: -20vh;
 }
 
-.row {
-    background-color: #b3b3b3;
-    padding-bottom: 5%;
-    margin-top: 3%;
+.storydiv {
+	margin: 10vh 10vw;
+}
+
+.storydiv h1 {
+	font-size: 12vh;
+	font-weight: 800;
+}
+
+.storydiv .story {
+	background-color: #98f7ec;
+	border-radius: 5vh;
+	margin: 10vh 0;
+}
+
+.storydiv .story .storyhead {
+	font-weight: 800;
+	font-size: 5vh;
+	color: #000;
+}
+.storydiv .story p {
+	text-align: justify;
+	font-size: 20px;
+}
+
+.storydiv .story .yourcomment {
+	margin: 5vh auto;
+}
+
+.storydiv input {
+	width: 40vw;
+	height: 7vh;
+	border-radius: 1vh;
+	padding: 0 1em;
+}
+
+.storydiv button {
+	margin: auto 2vw;
+	height: 7vh;
+	width: 10vw;
+	border-radius: 10vh;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.storydiv .storycomment {
+	margin: 5vh auto 2vh auto;
+	text-align: justify;
+	font-weight: 800;
+	font-size: 5vh;
+	color: #000;
+}
+
+.storydiv .commenthead {
+	font-weight: 800;
+	text-transform: uppercase;
 }
