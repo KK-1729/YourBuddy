@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Talk from 'talkjs';
+import NavBar from './components/Navbar/Navbar';
 
 class InboxComponent extends Component {
 
@@ -62,9 +63,10 @@ class InboxComponent extends Component {
 
     render() {
         return (
-        <span>
-            <div style={{height: '500px',marginTop:"80px"}} ref={c => this.container = c}>Loading...</div>
-        </span>);
+                <span>
+                    <div style={{height: '500px',marginTop:"80px"}} ref={c => this.container = c}>Loading...</div>
+                </span>
+        );
     }
 }
 

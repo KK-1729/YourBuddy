@@ -178,7 +178,16 @@ const Stories = () => {
 	}, [posts]);
 
 	const updateComment = () => {
-		setPrintPostComment(postcomment);
+		
+		if(postcomment=="idiotic" || postcomment=="You are dumb" || postcomment=="Bad" || postcomment=="You are pathetic") {
+			alert('Warning : This might be a hate comment. Action might be taken');
+		}
+
+		else
+		{
+			setPrintPostComment(postcomment);
+		}
+		
 	};
 
 	return (
@@ -228,7 +237,7 @@ const Stories = () => {
 										Post
 									</button>
 								</div>
-
+								
 								<Button variant="dark" className="btn col-lg-3">
 									Comment
 								</Button>

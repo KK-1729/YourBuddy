@@ -108,16 +108,23 @@ function NavBar() {
 									Stories
 								</Link>
 							</li>
-							<li className="nav-item">
-								<Link to="/login" className="nav-link">
-									Login
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link to="/signup" className="nav-link">
-									Sign Up
-								</Link>
-							</li>
+							{!user?<>
+	                         <li className="nav-item">
+	                             <Link to="/login" className="nav-link">Login</Link>
+	                         </li>
+	                         <li className="nav-item">
+	                             <Link to="/signup" className="nav-link">Sign Up</Link>
+	                         </li>
+	                         </>:<></>}
+							{user?<>
+                    <li className="nav-item">
+                          <Link to="/chat" className="nav-link">Chats</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <button onClick={logout} className="nav-link navbt">Logout</button>
+	                    </li>
+	                        </>:<></>}
 						</ul>
 					</div>
 				</nav>

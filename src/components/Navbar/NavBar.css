@@ -22,3 +22,13 @@
 	width: 126px;
 	height: 49px;
 }
+
+.navbt
+{
+	background-color: #17a09e !important;
+	border-color: #17a09e;
+	border-radius: 24.5px;
+	box-shadow: 0px 4px 4px rgba(63, 96, 98, 0.25);
+	width: 126px;
+	height: 49px;
+}

@@ -36,6 +36,7 @@ function PostForm() {
 			author: user.email,
 			comments: comments,
 		});
+		navigate("/home");
 	};
 
 	return (
