@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./fullStory.css";
 import Button from "react-bootstrap/Button";
 import NavBar from "../../components/Navbar/Navbar";
-import { Link } from "react-router-dom";
-
-//FireBase
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
@@ -66,7 +63,6 @@ const FullStory = ({ location }) => {
 				<br></br>
 				<br></br>
 				<button>Post</button>
-
 				<br></br>
 				<Button variant="dark" className="btn col-lg-3">
 					Comment
@@ -77,7 +73,6 @@ const FullStory = ({ location }) => {
 				<Button variant="dark" className="btn col-lg-3">
 					Dislike
 				</Button>
-
 				<br></br>
 				<br></br>
 				<br></br>

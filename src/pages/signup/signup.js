@@ -26,7 +26,8 @@ function SignUp() {
 			if (!errormsg) {
 				navigate("/login");
 			}
-		} catch (error) {
+		} 
+		catch (error) {
 			console.log(error.message);
 			setErrorMsg(error.message);
 		}

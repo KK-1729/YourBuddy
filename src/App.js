@@ -1,4 +1,3 @@
-// <<<<<<< backend2
 import React, {useState} from 'react';
 import './App.css';
 import Account from './pages/accountPage/accountPage';
@@ -14,8 +13,6 @@ import FullStory from './pages/fullStory/fullStory';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
-
-  const [isAuth, setIsAuth] = useState({});
   return (
     <div className="App">
       <Router>
