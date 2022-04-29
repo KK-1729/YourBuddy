@@ -10,22 +10,18 @@ import { db } from "../../firebase";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 // <<<<<<< backend2
-// import {auth} from '../../firebase'; 
-
-
+// import {auth} from '../../firebase';
 
 // const Stories=()=> {
 
 //     const [posts,setPosts] = useState([]);
 //     const postsCollectionRef = collection(db, "posts");
 
-
 //     const [user,setUser]=useState({});
 //     //Comment
 //     const [printpostcomment,setPrintPostComment]=useState("");
 //     const [postcomment,setPostComment]=useState("");
 //     const [postheading,setPostHeading]=useState("");
-
 
 //     const [comments,setComments] = useState([]);
 //     const commentsCollectionRef = collection(db, "comments");
@@ -50,20 +46,15 @@ import { onAuthStateChanged } from "firebase/auth";
 //         getComments();
 //     },[posts])
 
-
 //     const updateComment = () =>{
 //         setPrintPostComment(postcomment);
 //         alert('Warning : This might be a hate comment. Action might be taken');
 //     }
 
-
-
-
-
 //     return (
 //         <div>
 //             {/* <h1>Stories coming soon!</h1>  */}
-//             <NavBar /> 
+//             <NavBar />
 //             <div className="row">
 //                 <div className="col-lg-6 jumbo-left">
 //                     <h1>Start your story!</h1>
@@ -80,16 +71,15 @@ import { onAuthStateChanged } from "firebase/auth";
 
 //                 {posts.map((post)=>{
 //                 const hell="hell";
-//                 return(  
+//                 return(
 //                     <div key={post.key}>
 //                     <div className="story">
 //                         <h2>{post.heading}</h2>
 //                         <p>{post.content}</p>
-                        
-//                         <br />
-                        
 
-//                         <input type="text" 
+//                         <br />
+
+//                         <input type="text"
 //                             onChange={(event)=>{
 //                             setPostComment(event.target.value);
 //                             setPostHeading(post.heading)
@@ -97,13 +87,11 @@ import { onAuthStateChanged } from "firebase/auth";
 //                         />
 //                     <br></br><br></br>
 //                     <button onClick={()=>{updateComment()}}>Post</button>
-                
-                
+
 //                     <br></br>
 //                     <Button variant="dark" className="btn col-lg-3">Comment</Button>
 //                     <Button variant="dark" className="btn col-lg-3">Like</Button>
 //                     <Button variant="dark" className="btn col-lg-3">Dislike</Button>
-
 
 //                 <br></br><br></br><br></br><br></br>
 //                 <h2>Comments</h2>
@@ -123,15 +111,9 @@ import { onAuthStateChanged } from "firebase/auth";
 
 //                 ):<>No Comments have been posted yet !</>
 //                 }
-                
-                
-            
-                   
 
 //                 </div>
 
-                        
-                        
 //                     </div>
 //                 </div>
 //                 );
@@ -178,16 +160,16 @@ const Stories = () => {
 	}, [posts]);
 
 	const updateComment = () => {
-		
-		if(postcomment=="idiotic" || postcomment=="You are dumb" || postcomment=="Bad" || postcomment=="You are pathetic") {
-			alert('Warning : This might be a hate comment. Action might be taken');
-		}
-
-		else
-		{
+		if (
+			postcomment == "idiotic" ||
+			postcomment == "You are dumb" ||
+			postcomment == "Bad" ||
+			postcomment == "You are pathetic"
+		) {
+			alert("Warning : This might be a hate comment. Action might be taken");
+		} else {
 			setPrintPostComment(postcomment);
 		}
-		
 	};
 
 	return (
@@ -220,24 +202,29 @@ const Stories = () => {
 							<div className="story">
 								<h2 className="storyhead">{post.heading}</h2>
 								<p>{post.content}</p>
-								<div className="yourcomment">
-									<input
-										type="text"
-										placeholder="Share your thoughts on the post..."
-										onChange={(event) => {
-											setPostComment(event.target.value);
-											setPostHeading(post.heading);
-										}}
-									/>
-									<button
-										onClick={() => {
-											updateComment();
-										}}
-									>
-										Post
-									</button>
-								</div>
-								
+
+								{user ? (
+									<div className="yourcomment">
+										<input
+											type="text"
+											placeholder="Share your thoughts on the post..."
+											onChange={(event) => {
+												setPostComment(event.target.value);
+												setPostHeading(post.heading);
+											}}
+										/>
+										<button
+											onClick={() => {
+												updateComment();
+											}}
+										>
+											Post
+										</button>
+									</div>
+								) : (
+									<></>
+								)}
+
 								<Button variant="dark" className="btn col-lg-3">
 									Comment
 								</Button>
